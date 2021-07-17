@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,16 +9,33 @@
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
 </head>
-<body>
-        <script src="js/scripts.js"></script>
-        <h1>Birthday Calculator</h1>
-        <div>
-            <h2>About the Application</h2>
-            <p>For this week's Independent Project, you will be required to build a web application that takes a user's birthday and calculates the day of the week they 
-                were born and then depending on their gender outputs their Akan Name. </p>
 
-            <p>Simply enter your birthday through the chose your gender and click the submit button to see  your Akan name</p>
-        </div>
-    
+<body>
+    <script src="js/scripts.js"></script>
+    <h1>Birthday Calculator</h1>
+    <div>
+        <h2>About the Application</h2>
+        <p>For this week's Independent Project, you will be required to build a web application that takes a user's
+            birthday and calculates the day of the week they
+            were born and then depending on their gender outputs their Akan Name. </p>
+
+        <p>Simply enter your birthday through the chose your gender and click the submit button to see your Akan name
+        </p>
+    </div>
+
+    <label for="gender">Gender </label>
+    <select name="gender:required" id="gender">
+        <option>[[+gender]]</option>
+        <option value="1">Male</option>
+        <option value="2">Female</option>
+    </select>
+    <form action="Birthday" <label>
+        Enter your birthday:
+        <input type="date" name="bday">
+        </label>
+
+    </form>
+
 </body>
+
 </html>
