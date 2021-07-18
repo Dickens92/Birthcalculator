@@ -24,8 +24,8 @@ else if(month >12 || month <=0 || (month == 2 && day > 29)){
    alert("Kindly key in a valid month") 
 }
 if (male.checked===true) {
-  alert (daysOfTheWeek [d] + "Your birthday was on " + "Matching Akan name is: " + maleNames[d]);
+  alert (daysOfTheWeek [d] + "was the day of the week you were born" + "Matching Akan name is: " + maleNames[d]);
 }
 else if(female.checked===true) {
-  alert(daysOfTheWeek [d] + "Your birthday was on " + "Matching Akan name is: " + femaleNames[d])
+  alert(daysOfTheWeek [d] + "Was the day of the week you were born" + "Matching Akan name is: " + femaleNames[d])
 }
