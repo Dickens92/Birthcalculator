@@ -11,6 +11,8 @@ function findAkanName() {
   var Century = parseInt(year.substring(0, 2));
   var male = document.getElementById("male");
   var female = document.getElementById("female");
+  var submit =document.getElementById("submit")
+  submit.addEventListener("click", onSubmit)
 
   if (day > 31 || day <= 0) {
     alert("Kindly key in a valid day")
@@ -20,6 +22,7 @@ function findAkanName() {
   }
 
   var d = (((Century/4) -2*Century-1) + ((5*YY/4)) + ((26*(month+1)/10)) + day)%7;
+  
   
   if(maleTitles.checked == true){
     alert("The day of the week you were born is " + weekDays[d] + "Matching Akan name is: " + maleTitles[d]);
