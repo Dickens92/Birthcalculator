@@ -15,8 +15,6 @@ function findAkanName(){
   console.log(d);
   return (Math.floor(d));
 }
-
-var
   if(day >31 || day <=0){
     alert("Kindly key in a valid day")
 }
