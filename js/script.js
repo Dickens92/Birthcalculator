@@ -4,12 +4,12 @@ var maleTitles= ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
 
 
 function findAkanName() {
-  var day = parseInt(document.getElementById("day").value);
-  var month = parseInt(document.getElementById("month").value);
-  var Year = parseInt(year.substring(2, 4));
-  var Century = parseInt(year.substring(0, 2));
-  var male = document.getElementById("male");
-  var female = document.getElementById("female");
+  day = parseInt(document.getElementById("day").value);
+  month = parseInt(document.getElementById("month").value);
+  Year = parseInt(year.substring(2, 4));
+  Century = parseInt(year.substring(0, 2));
+  male = document.getElementById("male");
+  female = document.getElementById("female");
 
   if (day > 31 || day <= 0) {
     alert("Kindly key in a valid day")
@@ -18,9 +18,8 @@ function findAkanName() {
     alert("Kindly key in a valid month")
   }
 
-  var d = (((Century/4) -2*Century-1) + ((5*year/4)) + ((26*(month+1)/10)) + day)%7;
+  d = (((Century/4) -2*Century-1) + ((5*year/4)) + ((26*(month+1)/10)) + day)%7;
   
-
   if(maleTitles.checked == true){
     alert("was the day of the week you were born " + weekDays[d] + "Matching Akan name is: " + maleTitles[d]);
   }
@@ -28,4 +27,5 @@ function findAkanName() {
     alert("Was the day of the week you were born " + weekDays[d] + "Matching Akan name is: " + femaleTitle[d])
   }
 
+  
 }
