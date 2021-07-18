@@ -16,4 +16,14 @@ p {
     align-content: center;
     align-items: center;
     text-align: center;
+    font-size: larger;
+}
+button{
+    color: yellow;
+}
+label{
+    color: brown;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+    text-shadow: 3px 3px 6px greenyellow;
 }

@@ -4,9 +4,10 @@ var maleTitles= ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
 
 
 function findAkanName() {
+  var year = parseInt(document.getElementById("year").value);
   var day = parseInt(document.getElementById("day").value);
   var month = parseInt(document.getElementById("month").value);
-  var year = parseInt(year.substring(2, 4));
+  var YY = parseInt(year.substring(2, 4));
   var Century = parseInt(year.substring(0, 2));
   var male = document.getElementById("male");
   var female = document.getElementById("female");
@@ -18,7 +19,7 @@ function findAkanName() {
         alert ("Kindly key in a valid month")
   }
 
-  d = (((Century/4) -2*Century-1) + ((5*year/4)) + ((26*(month+1)/10)) + day)%7;
+  var d = (((Century/4) -2*Century-1) + ((5*YY/4)) + ((26*(month+1)/10)) + day)%7;
   
   if(maleTitles.checked == true){
     alert("was the day of the week you were born " + weekDays[d] + "Matching Akan name is: " + maleTitles[d]);
