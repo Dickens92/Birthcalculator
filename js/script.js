@@ -22,10 +22,10 @@ function findAkanName() {
   var d = (((Century/4) -2*Century-1) + ((5*YY/4)) + ((26*(month+1)/10)) + day)%7;
   
   if(maleTitles.checked == true){
-    alert("was the day of the week you were born " + weekDays[d] + "Matching Akan name is: " + maleTitles[d]);
+    alert("The day of the week you were born is " + weekDays[d] + "Matching Akan name is: " + maleTitles[d]);
   }
   else if (femaleTitle.checked == true) {
-    alert("Was the day of the week you were born " + weekDays[d] + "Matching Akan name is: " + femaleTitle[d])
+    alert("The day of the week you were born is" + weekDays[d] + "Matching Akan name is: " + femaleTitle[d])
   }
   
 }
