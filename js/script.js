@@ -11,8 +11,8 @@ function findAkanName() {
   var Century = parseInt(year.substring(0, 2));
   var male = document.getElementById("male");
   var female = document.getElementById("female");
-  var submit =document.getElementById("submit")
-  submit.addEventListener("click", onSubmit)
+  var button =document.getElementById("submit");
+  //submit.addEventListener("click", onSubmit)
 
   if (day > 31 || day <= 0) {
     alert("Kindly key in a valid day")
@@ -28,7 +28,7 @@ function findAkanName() {
     alert("The day of the week you were born is " + weekDays[d] + "Matching Akan name is: " + maleTitles[d]);
   }
   else if (femaleTitle.checked == true) {
-    alert("The day of the week you were born is" + weekDays[d] + "Matching Akan name is: " + femaleTitle[d])
+    alert("The day of the week you were born is" + weekDays[d] + "Matching Akan name is: " + femaleTitles[d]);
   }
   
 }
