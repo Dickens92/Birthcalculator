@@ -26,10 +26,10 @@ else if(month <=0 || month >12 || (month == 2 && day > 29)){
   var D = (day + Y + Math.floor(Y / 4) - Math.floor(Y / 100) + Math.floor(year / 400) + Math.floor((31 * M )/ 12)) % 7;
   
   if (male.checked == true){
-      alert("The day of the week you were born is " + weekDays[D] + "Matching Akan name is: " + maleTitles[D]);
+      alert("The day of the week you were born is " + weekDays[D] + " and Your Matching Akan name is: " + maleTitles[D]);
   }
   else if (female.checked == true){
-      alert("The day of the week you were born is" + weekDays[D] + "Matching Akan name is: " + femaleTitles[D]);
+      alert("The day of the week you were born is" + weekDays[D] + " and Your Matching Akan name is: " + femaleTitles[D]);
   }
 
 }
