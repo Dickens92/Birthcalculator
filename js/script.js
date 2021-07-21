@@ -7,28 +7,29 @@ function findAkanName() {
   var year = parseInt(document.getElementById("year").value);
   var day = parseInt(document.getElementById("day").value);
   var month = parseInt(document.getElementById("month").value);
-  var YY = parseInt(year.substring(2, 4));
-  var Century = parseInt(year.substring(0, 2));
   var male = document.getElementById("male");
   var female = document.getElementById("female");
   var button =document.getElementById("submit");
   //submit.addEventListener("click", onSubmit)
+  //var d = (((Century/4) -2*Century-1) + ((5*YY/4)) + ((26*(month+1)/10)) + day)%7;
 
-  if (day > 31 || day <= 0) {
-    alert("Kindly key in a valid day")
+  if(day <=0 || day >31){
+    alert("Valid day Required")
+}
+else if(month <=0 || month >12 || (month == 2 && day > 29)){
+   alert("Valid month required") 
+}
+
+  var A = Math.floor((14 - month) / 12)
+  var Y = year - A
+  var M = month + 12 * A - 2
+  var D = (day + Y + Math.floor(Y / 4) - Math.floor(Y / 100) + Math.floor(year / 400) + Math.floor((31 * M )/ 12)) % 7;
+  
+  if (male.checked == true){
+      alert("The day of the week you were born is " + weekDays[D] + "Matching Akan name is: " + maleTitles[D]);
   }
-  else if (month > 12 || month <= 0){
-        alert ("Kindly key in a valid month")
+  else if (female.checked == true){
+      alert("The day of the week you were born is" + weekDays[D] + "Matching Akan name is: " + femaleTitles[D]);
   }
 
-  var d = (((Century/4) -2*Century-1) + ((5*YY/4)) + ((26*(month+1)/10)) + day)%7;
-  
-  
-  if(maleTitles.checked == true){
-    alert("The day of the week you were born is " + weekDays[d] + "Matching Akan name is: " + maleTitles[d]);
-  }
-  else if (femaleTitle.checked == true) {
-    alert("The day of the week you were born is" + weekDays[d] + "Matching Akan name is: " + femaleTitles[d]);
-  }
-  
 }
